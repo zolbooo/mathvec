@@ -1,7 +1,7 @@
 {
   "name": "mathvec",
   "version": "1.0.0",
-  "description": "Math utilities library",
+  "description": "Simple math utility library built with Typescript",
   "main": "lib/index.js",
   "scripts": {
     "build": "npx tsc",
@@ -16,8 +16,10 @@
   "keywords": [
     "nodejs",
     "typescript",
-    "boilerplate",
-    "eslint"
+    "math",
+    "vector",
+    "library",
+    "utility"
   ],
   "prettier": {
     "semi": true,
