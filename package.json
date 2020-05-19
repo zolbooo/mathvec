@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Simple math utility library built with Typescript",
   "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "npx tsc",
     "start": "node lib/index.js",
