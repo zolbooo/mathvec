@@ -1,0 +1,50 @@
+{
+  "name": "mathvec",
+  "version": "1.0.0",
+  "description": "Math utilities library",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node lib/index.js",
+    "test": "npx jest",
+    "dev": "npx tsc-watch --onSuccess 'npm start'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zolbooo/nodejs-ts-boilerplate.git"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "boilerplate",
+    "eslint"
+  ],
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "author": "Zolboobayar Gantumur <zolboobayar@nhs.edu.mn>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zolbooo/nodejs-ts-boilerplate/issues"
+  },
+  "homepage": "https://github.com/zolbooo/nodejs-ts-boilerplate#readme",
+  "devDependencies": {
+    "@nicepack/eslint-ts": "^1.2.3",
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.1",
+    "eslint": "^7.0.0",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.0.0",
+    "tsc-watch": "^4.2.6",
+    "typescript": "^3.9.2"
+  },
+  "dependencies": {
+    "module-alias": "^2.2.2"
+  },
+  "_moduleAliases": {
+    "@": "prod"
+  }
+}
