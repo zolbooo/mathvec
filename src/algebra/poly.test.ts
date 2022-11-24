@@ -55,4 +55,8 @@ describe('Polynoms', () => {
     expect(Polynom.of(2, 3).equals(Polynom.of(2, 3))).toBe(true);
     expect(Polynom.equals(Polynom.of(5, 1, 321), Polynom.of(1))).toBe(false);
   });
+
+  it('should evaluate polynoms', () => {
+    expect(Polynom.of(1, 1, 1, 1).evaluate(2)).toBe(1 + 2 + 4 + 8);
+  });
 });

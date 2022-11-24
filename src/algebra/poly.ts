@@ -75,4 +75,14 @@ export class Polynom implements Latexable {
   equals(p: Polynom): boolean {
     return Polynom.equals(this, p);
   }
+
+  evaluate(n: number): number {
+    let x = 1;
+    let result = 0;
+    for (let i = 0; i <= this.degree; i += 1) {
+      result += x * (this.coefficients[i] ?? 0);
+      x *= n;
+    }
+    return result;
+  }
 }
