@@ -45,11 +45,5 @@
     "ts-jest": "^26.0.0",
     "tsc-watch": "^4.2.6",
     "typescript": "^3.9.2"
-  },
-  "dependencies": {
-    "module-alias": "^2.2.2"
-  },
-  "_moduleAliases": {
-    "@": "prod"
   }
 }
