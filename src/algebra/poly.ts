@@ -30,4 +30,17 @@ export class Polynom implements Latexable {
   add(p: Polynom): Polynom {
     return Polynom.add(this, p);
   }
+
+  static sub(left: Polynom, right: Polynom): Polynom {
+    return new Polynom(
+      Array(Math.max(left.degree, right.degree))
+        .fill(null)
+        .map(
+          (_, i) => (left.coefficients[i] ?? 0) - (right.coefficients[i] ?? 0),
+        ),
+    );
+  }
+  sub(right: Polynom): Polynom {
+    return Polynom.sub(this, right);
+  }
 }

@@ -17,4 +17,13 @@ describe('Polynoms', () => {
     expect(sum2.degree).toBe(3);
     expect(sum2.coefficients).toStrictEqual([5, 3, -5]);
   });
+  it('should subtract two polynoms properly', () => {
+    const result = Polynom.sub(Polynom.of(2, 3), Polynom.of(5, -1));
+    expect(result.degree).toBe(2);
+    expect(result.coefficients).toStrictEqual([-3, 4]);
+
+    const result2 = Polynom.of(0, 3, -5).sub(Polynom.of(5));
+    expect(result2.degree).toBe(3);
+    expect(result2.coefficients).toStrictEqual([-5, 3, -5]);
+  });
 });
