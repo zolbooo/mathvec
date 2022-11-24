@@ -1,7 +1,7 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['import'],
-  ignorePatterns: ['*.spec.ts'],
+  ignorePatterns: ['*.spec.ts', '*.test.ts'],
   extends: [
     'plugin:@typescript-eslint/recommended',
     'airbnb-typescript/base',
