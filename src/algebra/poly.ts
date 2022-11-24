@@ -10,9 +10,9 @@ export class Polynom implements Latexable {
   }
   static zero = new Polynom([0]);
 
-  static of(coefficients: number[]): Polynom;
-  static of(...coefficients: number[]): Polynom;
-  static of(...coefficients: (number | number[])[]) {
+  static of(coefficients: readonly number[]): Polynom;
+  static of(...coefficients: readonly number[]): Polynom;
+  static of(...coefficients: (number | readonly number[])[]) {
     return new Polynom(
       Array.isArray(coefficients[0])
         ? coefficients[0]
