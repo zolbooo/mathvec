@@ -26,4 +26,13 @@ describe('Polynoms', () => {
     expect(result2.degree).toBe(3);
     expect(result2.coefficients).toStrictEqual([-5, 3, -5]);
   });
+
+  it('should perform scalar operations', () => {
+    expect(Polynom.of(2, 3).scalarMult(6).coefficients).toStrictEqual([12, 18]);
+    expect(Polynom.of(-4, -12, 12).scalarDiv(-4).coefficients).toStrictEqual([
+      1,
+      3,
+      -3,
+    ]);
+  });
 });

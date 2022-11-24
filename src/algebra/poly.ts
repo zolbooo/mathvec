@@ -43,4 +43,11 @@ export class Polynom implements Latexable {
   sub(right: Polynom): Polynom {
     return Polynom.sub(this, right);
   }
+
+  scalarMult(scalar: number): Polynom {
+    return new Polynom(this.coefficients.map((value) => value * scalar));
+  }
+  scalarDiv(scalar: number): Polynom {
+    return new Polynom(this.coefficients.map((value) => value / scalar));
+  }
 }
