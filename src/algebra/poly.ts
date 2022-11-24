@@ -1,8 +1,9 @@
-import { Latexable } from '@/util';
+import { Latexable } from '../util';
+import { stripZeros } from './polyutils';
 
 export class Polynom implements Latexable {
   private constructor(public coefficients: readonly number[]) {
-    this.coefficients = coefficients;
+    this.coefficients = stripZeros(coefficients);
   }
 
   static of(coefficients: number[]): Polynom;

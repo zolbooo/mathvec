@@ -4,6 +4,9 @@ describe('Polynoms', () => {
   it('should create polynoms with correct degree', () => {
     expect(Polynom.of(2, 3).degree).toBe(2);
   });
+  it('should reduce degree of polynoms, if possible', () => {
+    expect(Polynom.of([2, 4, 0, 0]).degree).toBe(2);
+  });
 
   it('should add two polynoms properly', () => {
     const sum = Polynom.add(Polynom.of(2, 3), Polynom.of(5, -1));
