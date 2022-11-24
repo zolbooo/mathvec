@@ -8,9 +8,7 @@
   ],
   "scripts": {
     "build": "npx tsc",
-    "start": "node lib/index.js",
     "test": "npx jest",
-    "dev": "npx tsc-watch --onSuccess 'npm start'",
     "lint": "eslint src/**/*.ts"
   },
   "repository": {
