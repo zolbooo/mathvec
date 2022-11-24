@@ -65,4 +65,14 @@ export class Polynom implements Latexable {
     }
     return new Polynom(this.coefficients.slice(-x_exp));
   }
+
+  static equals(a: Polynom, b: Polynom): boolean {
+    return (
+      a.degree === b.degree &&
+      a.coefficients.every((coef, i) => coef === b.coefficients[i])
+    );
+  }
+  equals(p: Polynom): boolean {
+    return Polynom.equals(this, p);
+  }
 }
