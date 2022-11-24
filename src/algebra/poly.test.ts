@@ -35,4 +35,19 @@ describe('Polynoms', () => {
       -3,
     ]);
   });
+
+  it('should raise power of polynomial', () => {
+    expect(Polynom.of(1, 100).xPower(3).coefficients).toStrictEqual([
+      0,
+      0,
+      0,
+      1,
+      100,
+    ]);
+    expect(Polynom.of(1, 100).xPower(-3).coefficients).toStrictEqual([]);
+    expect(Polynom.of(1, 100, 24, 43).xPower(-2).coefficients).toStrictEqual([
+      24,
+      43,
+    ]);
+  });
 });

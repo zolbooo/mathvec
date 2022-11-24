@@ -50,4 +50,18 @@ export class Polynom implements Latexable {
   scalarDiv(scalar: number): Polynom {
     return new Polynom(this.coefficients.map((value) => value / scalar));
   }
+
+  /**
+   * @summary Multiply polynomial by power of x
+   * @example Polynom(x^3).xPower(2) -> Polynom(x^5)
+   * */
+  xPower(x_exp: number): Polynom {
+    if (x_exp !== Math.floor(x_exp)) {
+      throw Error('Polynoms can be raised to the whole power');
+    }
+    if (x_exp > 0) {
+      return new Polynom([...Array(x_exp).fill(0), ...this.coefficients]);
+    }
+    return new Polynom(this.coefficients.slice(-x_exp));
+  }
 }
