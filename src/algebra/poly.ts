@@ -5,6 +5,7 @@ export class Polynom implements Latexable {
   private constructor(public coefficients: readonly number[]) {
     this.coefficients = stripZeros(coefficients);
   }
+  static zero = new Polynom([]);
 
   static of(coefficients: number[]): Polynom;
   static of(...coefficients: number[]): Polynom;
