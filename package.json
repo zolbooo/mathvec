@@ -4,7 +4,8 @@
   "description": "Simple math utility library built with Typescript",
   "main": "lib/index.js",
   "files": [
-    "lib"
+    "lib",
+    "LICENSE"
   ],
   "scripts": {
     "build": "npx tsc",
