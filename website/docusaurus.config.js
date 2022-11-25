@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Mathvec',
   tagline: 'Simple math library built with Typescript 🧮',
-  url: 'https://mathvec.github.io',
-  baseUrl: '/',
+  url: 'https://zolbooo.github.io',
+  baseUrl: '/mathvec',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
