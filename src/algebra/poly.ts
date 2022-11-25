@@ -8,6 +8,7 @@ export class Polynom implements Latexable {
       this.coefficients = [0];
     }
   }
+
   static zero = new Polynom([0]);
 
   static of(coefficients: readonly number[]): Polynom;
@@ -31,6 +32,7 @@ export class Polynom implements Latexable {
         .map((_, i) => (a.coefficients[i] ?? 0) + (b.coefficients[i] ?? 0)),
     );
   }
+
   add(p: Polynom): Polynom {
     return Polynom.add(this, p);
   }
@@ -44,6 +46,7 @@ export class Polynom implements Latexable {
         ),
     );
   }
+
   sub(right: Polynom): Polynom {
     return Polynom.sub(this, right);
   }
@@ -51,6 +54,7 @@ export class Polynom implements Latexable {
   scalarMult(scalar: number): Polynom {
     return new Polynom(this.coefficients.map((value) => value * scalar));
   }
+
   scalarDiv(scalar: number): Polynom {
     return new Polynom(this.coefficients.map((value) => value / scalar));
   }
@@ -75,6 +79,7 @@ export class Polynom implements Latexable {
       a.coefficients.every((coef, i) => coef === b.coefficients[i])
     );
   }
+
   equals(p: Polynom): boolean {
     return Polynom.equals(this, p);
   }
