@@ -5,4 +5,8 @@ describe('Number theory functions', () => {
     expect(gcd(2, 3)).toBe(1);
     expect(gcd(2, 6)).toBe(2);
   });
+  it('should accept negative numbers', () => {
+    expect(gcd(2, -3)).toBe(1);
+    expect(gcd(-2, 6)).toBe(2);
+  });
 });
