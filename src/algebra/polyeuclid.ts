@@ -14,6 +14,19 @@ interface PolyEuclidStep {
   };
 }
 
+export function reducePolynom(a: Polynom): Polynom {
+  if (a.degree === 0) {
+    return a;
+  }
+  let k = gcd(Math.abs(a.coefficients[0]), Math.abs(a.coefficients[1]));
+  for (let i = 2; i <= a.degree; i += 1) {
+    k = gcd(k, Math.abs(a.coefficients[i]));
+    if (k == 1) {
+      break;
+    }
+  }
+  return a.scalarDiv(k);
+}
 export function detailedPolyEuclid(
   a: Polynom,
   b: Polynom,

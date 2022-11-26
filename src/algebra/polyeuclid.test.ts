@@ -1,5 +1,54 @@
 import { Polynom } from './poly';
-import { detailedPolyEuclid } from './polyeuclid';
+import { detailedPolyEuclid, reducePolynom } from './polyeuclid';
+
+describe('Euclid utils', () => {
+  it('should reduce polynoms', () => {
+    const testcases = [
+      [[1], [1]],
+      [
+        [2, 8],
+        [1, 4],
+      ],
+      [
+        [1, 8],
+        [1, 8],
+      ],
+      [
+        [1, 8, 3],
+        [1, 8, 3],
+      ],
+    ];
+    expect.assertions(testcases.length);
+    for (let [coefficients, expected] of testcases) {
+      expect(
+        reducePolynom(Polynom.of(coefficients)).coefficients,
+      ).toStrictEqual(expected);
+    }
+  });
+  it('should reduce polynoms with negative coefficients', () => {
+    const testcases = [
+      [[-1], [-1]],
+      [
+        [-2, 8],
+        [-1, 4],
+      ],
+      [
+        [6, -8],
+        [3, -4],
+      ],
+      [
+        [6, -8, -64],
+        [3, -4, -32],
+      ],
+    ];
+    for (let [coefficients, expected] of testcases) {
+      expect(() => reducePolynom(Polynom.of(coefficients))).not.toThrow();
+      expect(
+        reducePolynom(Polynom.of(coefficients)).coefficients,
+      ).toStrictEqual(expected);
+    }
+  });
+});
 
 describe('Euclid on polynomials', () => {
   it('should stop if one of polynoms is zero', () => {
